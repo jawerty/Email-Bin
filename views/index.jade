@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  div(id='content')
+  if authorized == false
+    h1= title
+    p Simple node.js email client.
+    button(id="start_button", onclick="window.location.href='/auth'") Start
+  else
+    h1 Inbox   <button class='option' onclick='window.location.href="/refresh"'>refresh</button> <button class='option' onclick='toggleCompose()' >compose</button>
+    if message != ""
+      p(style='color:#F38630') #{message}
+    div(id='compose')
+      form(method='post', action='/compose')
+        h3 Compose
+        input(type='text', required=true, name='to', placeholder='To (separated by commas)')
+        br
+        input(type='text', name='cc', placeholder='CC (separated by commas)')
+        br
+        input(type='text', required=true, name='subject', placeholder='Subject')  
+        br
+        textarea(id='compose_area', name='message_body', placeholder='Message Body')
+        br
+        input(type='submit', required=true, value='Send')
+    
+    if emails != null
+      for email in emails
+        div(id='message_div_cover'+email.id, onmouseover="hoverOver(this)", onmouseout="hoverOut(this)", onclick="onClick(this)")
+          div(class='message_div')= email.subject
+        div(id='body_div_cover'+email.id, class='body_div')
+          label(class='label') From: 
+          label  #{email.from}
+          br
+          br
+          label(class='label') Date:
+          label  #{email.short_date}
+          br
+          br
+          if cc.length > 0
+            label(class='label') cc:&nbsp;
+            for address in cc
+              label= address + " "

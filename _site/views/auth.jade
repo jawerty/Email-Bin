@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p #{error}
+  form(method='post')
+    input(type='text', required=true, name='email_address', placeholder='Email Address')
+    br
+    input(type='password', required=true, name='email_password', placeholder='Password')	
+    br
+    input(type='submit', required=true, value='Authorize')

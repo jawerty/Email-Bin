@@ -1,0 +1,39 @@
+body {
+  padding: 50px 250px;
+  font-size: 28px;
+  font-family: sans-serif;
+  color: #666666;
+  background-color: #e2e2EE;
+}
+
+h1 {
+	font-family: Helvetica;
+	color: #b4bcc0;
+}
+
+a {
+  color: #999999;
+}
+
+input[type='submit'], button {
+	font-size: 28px;
+	border: 1px solid #b4bcc0;
+	border-radius: 5px;
+	background-color: #e2e2EE;
+	color: #999999;
+}
+
+input[type='submit']:hover, button:hover {
+	background-color: #F38630;
+	border: 1px solid #FA6900;
+	color: #eee;
+}
+
+input[type='text'], input[type='password'] {
+	border-radius: 5px;
+	border: 1px solid #b4bcc0;
+	font-size: 28px;
+	color: #999999;
+	padding: 5px;
+	margin-bottom: 20px;
+}

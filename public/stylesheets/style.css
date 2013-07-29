@@ -1,0 +1,83 @@
+body {
+  padding: 50px 250px;
+  font-size: 28px;
+  font-family: sans-serif;
+  color: #666666;
+  background-color: #fff;
+}
+
+h1, h3 {
+	font-family: Helvetica;
+	color: #69D2E7;
+}
+
+a {
+	font-size: 28px;
+	text-decoration: none;
+	color: #F38630;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+input[type='submit'], button {
+	font-size: 28px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #999999;
+}
+
+input[type='submit']:hover, button:hover {
+	background-color: #F38630;
+	color: #eee;
+}
+
+input[type='text'], input[type='password'] {
+	border-radius: 5px;
+	border: 1px solid #b4bcc0;
+	font-size: 28px;
+	color: #999999;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+input[type='text']:focus, input[type='password']:focus {
+	border: 1px solid #F38630;
+}
+
+.message_div {
+	border-top: 1px solid #F38630;
+	width: 100%;
+	padding: 20px 10px;
+	display:inline-block;
+}
+
+.body_div {
+	display: none;
+	margin: 20px;
+	font-size: 18px;
+}
+
+.label {
+	color: #69D2E7;
+}
+
+#compose {
+	display: none;
+	margin: 40px;
+	font-size: 18px;
+}
+
+#compose_area {
+	border-radius: 1px;
+	border: 1px solid #b4bcc0;
+	font-size: 20px;
+	color: #999999;
+	padding: 5px;
+	margin-bottom: 20px;
+	resize: none;
+	width: 600px;
+	height: 250px;
+}

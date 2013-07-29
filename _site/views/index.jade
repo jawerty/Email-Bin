@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  if authorized == false
+    p Simple node.js email client.
+    button(id="start_button", onclick="window.location.href='/auth'") Start
+  else
+    p display
